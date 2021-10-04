@@ -1,25 +1,39 @@
-import logo from './logo.svg';
+import React from 'react';
 import './App.css';
+import ListContainer from './components/List/ListContainer';
 
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+
+class App extends React.Component {
+
+  state = {
+    noteData: [
+      { id: 3, title: "Написать логику" },
+      { id: 2, title: "Стилизовать" },
+      { id: 1, title: "Задеплоить todoList" }
+    ],
+  };
+
+  addNote = (title) => {
+    //console.log(this.state);
+    let lastId = this.state.noteData[0] ? this.state.noteData[0].id + 1 : 1;
+    this.setState({ noteData: [{ id: lastId, title: title }, ...this.state.noteData] });
+  }
+
+  deleteNote = (idNote) => {
+    this.setState(
+      {
+        noteData: this.state.noteData.filter(id => id.id !== idNote)
+      }
+    );
+  }
+
+  render() {
+    return (
+      <div className="app-wrapper">
+        <ListContainer data={this.state.noteData} addNote={this.addNote} deleteNote={this.deleteNote}/>
+      </div>
+    );
+  }
 }
 
 export default App;

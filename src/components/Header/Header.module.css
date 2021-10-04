@@ -1,0 +1,28 @@
+.content {
+    width: 100%;
+}
+
+.input {
+    display: flex;
+}
+.input input{
+    width: 84%;
+}
+
+h2 {
+    font-family: cursive;
+}
+
+.input button {
+    margin-left: auto;
+    border-radius: 4px;
+    border: none;
+    outline: none;
+    color: #fff;
+    background: linear-gradient(#ff6100, rgba(255, 80, 80, 1));
+    width: 10%;
+    font-size: 14px;
+    line-height: 27px;
+}
+
+

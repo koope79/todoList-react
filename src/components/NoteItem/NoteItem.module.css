@@ -1,0 +1,30 @@
+.content {
+    display: flex;
+    margin-bottom: 5px;
+    /* width: 100%; */
+}
+
+.noteButton {
+    margin-left: auto;
+}
+
+.noteButton button {
+    border-radius: 4px;
+    background: linear-gradient(#ff6100, rgba(255, 80, 80, 1));
+    border: none;
+    color: white;
+    padding: 5px 7px;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.textNote span{
+    cursor: pointer;
+    font-size: 15px;
+    font-family: cursive;
+}
+
+.textNote.Line {
+    text-decoration: line-through;
+    color: rgb(100, 100, 100);
+}
