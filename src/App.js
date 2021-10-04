@@ -7,9 +7,10 @@ class App extends React.Component {
 
   state = {
     noteData: [
-      { id: 3, title: "Написать логику" },
-      { id: 2, title: "Стилизовать" },
-      { id: 1, title: "Задеплоить todoList" }
+      { id: 4, title: "Написать логику" },
+      { id: 3, title: "Стилизовать" },
+      { id: 2, title: "Задеплоить todoList" },
+      { id: 1, title: "Залить в GitHub" }
     ],
   };
 
