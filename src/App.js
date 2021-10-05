@@ -15,7 +15,6 @@ class App extends React.Component {
   };
 
   addNote = (title) => {
-    //console.log(this.state);
     let lastId = this.state.noteData[0] ? this.state.noteData[0].id + 1 : 1;
     this.setState({ noteData: [{ id: lastId, title: title }, ...this.state.noteData] });
   }
