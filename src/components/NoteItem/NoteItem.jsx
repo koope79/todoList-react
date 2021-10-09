@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import s from './NoteItem.module.css';
 
-const NoteItem = (props) => {
+const NoteItem = React.memo((props) => {
 
     let [editMode, setEditMode] = useState(false);
     const activeMode = () => {
@@ -22,6 +22,6 @@ const NoteItem = (props) => {
 
         </div>
     );
-}
+});
 
 export default NoteItem;
